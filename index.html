@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXx4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="cont">
+        <div class="pg signupC" id="signupC">
+            <h2>Sign Up</h2>
+            <form action="signup">
+                <label for="name"> Full Name</label>
+                <input placeholder=" Name" type="text">
+                <label for="username">Username</label>
+                <input placeholder="Enter A Username" type="text">
+                <label for="email">Email</label>
+                <input placeholder="Enter Your Email" type="email" name="email" autocomplete="off">
+                <label for="password">Password</label>
+                <div class="pwd">
+                    <input placeholder="Enter A Password" type="password" name="password" id="passwS">
+                    <i onclick="textPwdS()" class="far fa-eye" id="eyeOS" style="display:none;"></i>
+                    <i onclick="textPwdS()" class="far fa-eye-slash" id="eyeSS"></i>
+                </div>
+            </form>
+            <button>Sign Up</button>
+            <br>
+            <p onclick="switchToLogin()" class="pt" id="loginF">Already have an Account? LogIn</p>
+        </div>
+
+        <div style="display: none;" class="loginC pg" id="loginC">
+            <h2>Login</h2>
+            <form action="login">
+                <label for="username">Username</label>
+                <input placeholder="Enter Your Username" type="text">
+                <label for="password">Password</label>
+                <div class="pwd">
+                    <input placeholder="Enter Your Password" type="password" name="password" id="passwL">
+                    <i onclick="textPwdL()" class="far fa-eye" id="eyeOL" style="display:none;"></i>
+                    <i onclick="textPwdL()" class="far fa-eye-slash" id="eyeSL"></i>
+                </div>
+            </form>
+
+            <button>Login</button>
+            <p onclick="switchToSignup()" class="pt" id="signupF">Don't have an Account yet? Signup now!</p>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
